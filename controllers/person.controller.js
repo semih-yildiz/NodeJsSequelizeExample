@@ -4,7 +4,7 @@ const db = require("../models");
 const Person = db.person;
 const Op = db.Sequelize.Op;
 
-//Person Listeleme SequalizeORM
+//SequalizeORM Kullanarak Person Listeleme 
 exports.getAllSeq = (req, res) => {  
   Person.findAll().then(data => {
     console.log(data);
@@ -18,7 +18,7 @@ exports.getAllSeq = (req, res) => {
     });
 };
 
-//Person Oluşturma SequalizeORM
+//SequalizeORM Kullanarak Person Oluşturma
 exports.createSeq = (req, res) => {
   // Validate request
   if (!req.body.name) {
