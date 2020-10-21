@@ -5,7 +5,7 @@ const Person = db.person;
 const Op = db.Sequelize.Op;
 
 //Person Listeleme SequalizeORM
-exports.getAllSeq = (req, res) => {  
+exports.getAll = (req, res) => {  
   Person.findAll().then(data => {
     console.log(data);
     res.send(data);
@@ -19,7 +19,7 @@ exports.getAllSeq = (req, res) => {
 };
 
 //Person Oluşturma SequalizeORM
-exports.createSeq = (req, res) => {
+exports.create = (req, res) => {
   // Validate request
   if (!req.body.name) {
     res.status(400).send({

@@ -4,12 +4,12 @@ const cors = require('cors');
 const persons = require("../controllers/person.controller.js");
 
 
-router.post('/getAllSeq', cors(), function(req, res, next) {
-    persons.getAllSeq(req, res);
+router.post('/getAll', cors(), function(req, res, next) {
+    persons.getAll(req, res);
 });
 
-router.post('/createSeq', cors(), function(req, res, next) {
-    persons.createSeq(req, res);
+router.post('/create', cors(), function(req, res, next) {
+    persons.create(req, res);
 });
 
 module.exports = router;
