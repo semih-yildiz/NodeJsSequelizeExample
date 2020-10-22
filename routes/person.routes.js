@@ -12,4 +12,10 @@ router.post('/create', cors(), function(req, res, next) {
     persons.create(req, res);
 });
 
+router.post('/createPersonAndAddress', cors(), function(req, res, next) {
+    persons.createPersonAndAddress(req, res);
+});
+
+
+
 module.exports = router;
